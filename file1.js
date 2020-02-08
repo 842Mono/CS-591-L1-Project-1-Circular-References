@@ -60,7 +60,7 @@ fs.readFile("inputcode.js", (err, code) =>
                         break;
                 }
                 
-                if(listleft.length == 0 || listright == 0) // || !(listleft[0] == listright[0]))
+                if(listleft.length != 0 && listright.length == 0) // || !(listleft[0] == listright[0]))
                     console.log("Warning! Circular Reference Assignment at " + path.node.loc.start.line);
     //             console.log(path.node);
             }
